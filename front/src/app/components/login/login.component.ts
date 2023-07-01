@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
 form:FormGroup ;
 cargando = false;
 
-  constructor(private fb:FormBuilder,private _snackBar: MatSnackBar){
+  constructor(private fb:FormBuilder,private _snackBar: MatSnackBar , private router: Router){
     this.form = this.fb.group({
       usuario:['', Validators.required],
       contrasena:['', Validators.required]
@@ -51,7 +52,8 @@ cargando = false;
     this.cargando = true;
     setTimeout(() => {
       //redireccionamos a la pagina principal
-      this.cargando=false;
+      this.router.navigate(['principal'])
+     // this.cargando=false;
     }, 1500);
   }
 }
