@@ -9,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
 form:FormGroup ;
+cargando = false;
 
   constructor(private fb:FormBuilder,private _snackBar: MatSnackBar){
     this.form = this.fb.group({
@@ -26,9 +27,11 @@ form:FormGroup ;
 
     if(usuario=='teamCalidad'&& contrasena=='123'){
   //redireccion a la pagina principal
+  this.fakecargando();
     }else{
       //mostramos un mensaje de error
        this.error();
+       this.form.reset();
     }
 
     
@@ -42,5 +45,13 @@ form:FormGroup ;
  
 
  
+  }
+
+  fakecargando(){
+    this.cargando = true;
+    setTimeout(() => {
+      //redireccionamos a la pagina principal
+      this.cargando=false;
+    }, 1500);
   }
 }
