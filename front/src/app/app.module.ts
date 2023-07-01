@@ -14,12 +14,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavegacionComponent } from './navegacion/navegacion.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalDashComponent,
-    NavegacionComponent
+    NavegacionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
