@@ -20,7 +20,14 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from "@angular/forms";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import { ClientesComponent } from './principal-dash/clientes/clientes.component';
+import { VentasComponent } from './principal-dash/ventas/ventas.component';
+import { EmpresaComponent } from './principal-dash/empresa/empresa.component';
+import { VendedoresComponent } from './principal-dash/vendedores/vendedores.component';
+import { ProductosComponent } from './principal-dash/productos/productos.component';
+import { PrincipalDashRoutingModule } from './principal-dash/principal-dash-routing.module';
+import { RouterModule } from '@angular/router';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 
 @NgModule({
@@ -28,7 +35,12 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     AppComponent,
     PrincipalDashComponent,
     NavegacionComponent,
-    LoginComponent
+    LoginComponent,
+    ClientesComponent,
+    VentasComponent,
+    EmpresaComponent,
+    VendedoresComponent,
+  ProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +58,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatInputModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    PrincipalDashRoutingModule,
+    RouterModule,
+    MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
