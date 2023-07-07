@@ -8,13 +8,10 @@ import { FacturacionComponent } from './facturacion/facturacion.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ProductosComponent } from './productos/productos.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-
-
+import { EmpresaComponent } from './empresa/empresa.component';
+import { VentasComponent } from './ventas/ventas.component';
+import { TrabajadorComponent } from './trabajador/trabajador.component';
+import { AdministracionComponent } from './administracion/administracion.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -22,17 +19,19 @@ import { MatListModule } from '@angular/material/list';
     
     ClientesComponent,
     ProductosComponent,
-    NavbarComponent
+    NavbarComponent,
+    EmpresaComponent,
+    VentasComponent,
+    TrabajadorComponent,
+    AdministracionComponent
+   
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    
+   
   ]
 })
 export class DashboardModule { }

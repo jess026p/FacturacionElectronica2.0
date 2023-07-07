@@ -10,16 +10,17 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { PrincipalDashRoutingModule } from 'src/app/principal-dash/principal-dash-routing.module';
 import { RouterModule } from '@angular/router';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+//import { DashboardModule } from '../dashboard/dashboard.module';
+//import { DashboardRoutingModule } from '../dashboard/dashboard-routing.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
-  declarations: [
-    
-
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     MatIconModule,
@@ -32,9 +33,26 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-    PrincipalDashRoutingModule,
+
     RouterModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    RouterModule,
+    MatBottomSheetModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule
   ],
   exports:[
    
@@ -48,9 +66,27 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-    PrincipalDashRoutingModule,
     RouterModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+   
+    RouterModule,
+    MatBottomSheetModule,
+    ReactiveFormsModule,
+ 
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,40 @@
+
+mat-form-field{
+    width: 300px;
+
+}
+
+.container > div {
+    margin: 30px;
+   
+  }
+  
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #ccc;
+    margin: 40px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  
+  .custom-button {
+    background-color: #300aae; /* Color de fondo deseado */
+    color: #ffffff; /* Color del texto deseado */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
