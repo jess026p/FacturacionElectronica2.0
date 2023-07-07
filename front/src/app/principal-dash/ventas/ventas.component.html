@@ -1,1 +1,84 @@
-<p>ventas works!</p>
+<div >
+  <form class="sales-form">
+    <div class="form-group">
+        <label>Establecimiento</label>
+        <select name="establecimiento">
+          <option value="">Seleccione un establecimiento</option>
+          <option value="establecimiento1">Establecimiento 1</option>
+          <option value="establecimiento2">Establecimiento 2</option>
+          <option value="establecimiento3">Establecimiento 3</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label>Nombre Comercial</label>
+      <input type="text" name="nombreComercial">
+    </div>
+    <div class="form-group">
+      <label>Fecha de Emisión</label>
+      <input type="date" name="fechaEmision">
+    </div>
+    <div class="form-group">
+      <label>Trabajador</label>
+      <input type="text" name="trabajador">
+    </div>
+    <div class="form-group">
+      <label>Cliente</label>
+      <input type="text" name="cliente">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">Nuevo Cliente</button>
+    </div>
+    <div class="form-group">
+      <label>Buscar Producto</label>
+      <input type="text" name="buscarProducto">
+    </div>
+    <div class="form-group">
+      <label>Cantidad</label>
+      <input type="number" name="cantidad">
+    </div>
+    <div class="form-group">
+      <button class="btn">Guardar Producto</button>
+    </div>
+  </form>
+  <div class="impuestos-container">
+    <!-- Contenido de los impuestos -->
+  </div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Descripción</th>
+          <th>Precio Unitario</th>
+          <th>Tarifa</th>
+          <th>Descuento</th>
+          <th>Valor Total</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <td>aaaa</td>
+          <td>nabre</td>
+          <td>alido</td>
+          <td>cion</td>
+          <td>aaa</td>
+          <td>caar</td>
+        
+          <td>
+            <button  mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+            <button  mat-icon-button class="mat-warn"> <mat-icon>delete</mat-icon></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="input-container">
+      <input type="text" placeholder="Input 1">
+      <input type="text" placeholder="Input 2">
+      <input type="text" placeholder="Input 3">
+    </div>   
+  </div>
+</div>
+
+  
+  

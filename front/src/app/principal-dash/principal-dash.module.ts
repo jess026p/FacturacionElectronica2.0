@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PrincipalDashRoutingModule } from './principal-dash-routing.module';
 import { ProductosComponent } from './productos/productos.component';
 import { FacturacionComponent } from './facturacion/facturacion.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 
 @NgModule({

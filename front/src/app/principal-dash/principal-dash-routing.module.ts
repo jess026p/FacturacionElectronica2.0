@@ -7,7 +7,7 @@ import { FacturacionComponent } from './facturacion/facturacion.component';
 
 const routes: Routes = [
   {
-    path: 'principal-dash',component: PrincipalDashComponent,
+    path: '',component: PrincipalDashComponent,
     children: [
       
       { path: 'productos', component: ProductosComponent },

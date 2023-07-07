@@ -52,8 +52,8 @@ cargando = false;
     this.cargando = true;
     setTimeout(() => {
       //redireccionamos a la pagina principal
-      this.router.navigate(['principal'])
+      this.router.navigate(['dashboard'])
      // this.cargando=false;
-    }, 1500);
+    }, 800);
   }
 }
