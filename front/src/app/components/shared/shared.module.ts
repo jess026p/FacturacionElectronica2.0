@@ -17,7 +17,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -52,7 +52,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTableModule
   ],
   exports:[
    
@@ -86,7 +87,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
  
     MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTableModule
   ]
 })
 export class SharedModule { }
