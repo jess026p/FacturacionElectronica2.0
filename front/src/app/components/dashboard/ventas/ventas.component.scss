@@ -1,6 +1,8 @@
+/*.clase.principal {
+  transform: scale(0.9); /* Ajusta el valor de escala según tus necesidades }*/
 
 .contenedor {
-  
+  transform: scale(0.9);
   display: flex;
   justify-content: space-between;
 }
@@ -13,9 +15,8 @@
   border: 2px solid black;
   padding: 20px;
   width: 50%;
-  float: left;
-
-  margin: 70px;
+  height: 100%;
+  overflow: auto;
 }
 .columna-derecha input {
   width: 200px; /* Ajusta el ancho del input según tus necesidades */

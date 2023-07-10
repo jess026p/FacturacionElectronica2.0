@@ -12,6 +12,8 @@ import { EmpresaComponent } from './empresa/empresa.component';
 import { VentasComponent } from './ventas/ventas.component';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { AdministracionComponent } from './administracion/administracion.component';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -30,6 +32,7 @@ import { AdministracionComponent } from './administracion/administracion.compone
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
+    MatDialogModule
     
    
   ]
