@@ -1,14 +1,59 @@
+<mat-card>
+  <mat-card-content>
+    <h3>
+      Vendedores
+    </h3></mat-card-content>
+</mat-card>
 <div class="container">
     <div >
-<h2>Trabajador</h2>
-      <h2>CI:
+    
+      <h3>CI:
         <mat-form-field>
             <mat-label>Buscar </mat-label>
             <input matInput placeholder="Cliente">
           </mat-form-field>
-      </h2>
+      </h3>
       
-      <button class="custom-button">Nuevo Trabajador</button>
+      <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Vendedor</button>
+      <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
+        <mat-form-field>
+          <mat-label>identificacion</mat-label>
+          <input matInput formControlName="identificacion" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="nombre" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Apellido</mat-label>
+          <input matInput formControlName="apellido" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Dirección</mat-label>
+          <input matInput formControlName="direccion" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>usuario</mat-label>
+          <input matInput formControlName="usuario" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>contrasena</mat-label>
+          <input matInput formControlName="contrasena" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Correo Electrónico</mat-label>
+          <input matInput formControlName="correoElectronico" required>
+        </mat-form-field>
+      
+        <button mat-raised-button color="primary" type="submit">Guardar</button>
+      </form>
+     
+     
       <h3>lista de Trabajadores</h3>
     </div>
     <div class="mat-elevation-z8">

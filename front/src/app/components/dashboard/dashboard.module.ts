@@ -14,6 +14,9 @@ import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { AdministracionComponent } from './administracion/administracion.component';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 
+import { FirmaElectronicaComponent } from './firma-electronica/firma-electronica.component';
+import { SucursalesComponent } from './sucursales/sucursales.component';
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -25,7 +28,10 @@ import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angula
     EmpresaComponent,
     VentasComponent,
     TrabajadorComponent,
-    AdministracionComponent
+    AdministracionComponent,
+   
+    FirmaElectronicaComponent,
+    SucursalesComponent
    
   ],
   imports: [

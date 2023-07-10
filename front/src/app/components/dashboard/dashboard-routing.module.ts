@@ -11,13 +11,14 @@ import { EmpresaComponent } from './empresa/empresa.component';
 
 const routes: Routes = [
   {path:'',component: DashboardComponent,children:[
-    {path:'', component: FacturacionComponent},
+   // {path:'', component: FacturacionComponent},
+   {path:'',component: VentasComponent},
+   {path:'ventas',component: VentasComponent},
     {path:'clientes',component: ClientesComponent},
-    {path:'productos',component: ProductosComponent},
-    {path:'ventas',component: VentasComponent},
-    {path:'trabajador',component: TrabajadorComponent},
+    //{path:'productos',component: ProductosComponent},
+    //{path:'trabajador',component: TrabajadorComponent},
     {path:'administracion',component: AdministracionComponent},
-    {path:'empresa',component: EmpresaComponent},
+    //{path:'empresa',component: EmpresaComponent},
 
   ]}
 

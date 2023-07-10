@@ -4,49 +4,52 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+   <mat-nav-list>
+     <!--
       <a mat-list-item  href="dashboard/">
         <div class="icono-y-texto">
           <img src="../../assets/img/factura.png" />
           <span>Facturacion</span>
         </div>
-      </a>
+      </a>-->
       
-      <a mat-list-item href="/dashboard/productos"  >
+      <!-- <a mat-list-item href="/dashboard/productos"  >
         <div class="icono-y-texto">
           <img src="../../assets/img/productos.png" />
           <span>Productos</span>
-        </div></a>
+        </div></a> -->
+        <a mat-list-item href="dashboard/ventas">
+          <div class="icono-y-texto">
+            <img src="../../assets/img/caja.png" />
+            <span>Ventas</span>
+          </div>
+        </a>
       <a mat-list-item href="dashboard/clientes">
         <div class="icono-y-texto">
           <img src="../../assets/img/clientee.png" />
           <span>Clientes</span>
         </div>
       </a>
-      <a mat-list-item href="dashboard/ventas">
-        <div class="icono-y-texto">
-          <img src="../../assets/img/caja.png" />
-          <span>Ventas</span>
-        </div>
-      </a>
-      <a mat-list-item href="dashboard/trabajador">
+     
+      <!--<a mat-list-item href="dashboard/trabajador">
         <div class="icono-y-texto">
           <img src="../../assets/img/vendedor.png" />
           <span>Trabajador</span>
         </div>
-      </a>
+      </a>-->
       <a mat-list-item href="dashboard/administracion">
         <div class="icono-y-texto">
           <img src="../../assets/img/config.png" />
           <span>Administracion</span>
         </div>
       </a>
-      <a mat-list-item href="dashboard/empresa">
+
+      <!--<a mat-list-item href="dashboard/empresa">
         <div class="icono-y-texto">
           <img src="../../assets/img/empresa.png" />
           <span>Empresa</span>
         </div>
-      </a>
+      </a>-->
 
     </mat-nav-list>
     

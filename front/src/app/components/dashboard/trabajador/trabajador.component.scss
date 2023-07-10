@@ -1,6 +1,12 @@
 
+mat-card{
+  background-color: rgb(178, 189, 235);
+  height: 100px;
+}
 .container > div {
+  background-color: aliceblue;
     margin: 30px;
+    overflow: auto;
   }
     
     .table-container {

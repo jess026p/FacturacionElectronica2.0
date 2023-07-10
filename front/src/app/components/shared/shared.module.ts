@@ -18,7 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
-
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [],
   imports: [
@@ -33,7 +33,7 @@ import { MatTableModule } from '@angular/material/table';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-
+    MatTabsModule,
     RouterModule,
     MatBottomSheetModule,
     ReactiveFormsModule,
@@ -80,7 +80,7 @@ import { MatTableModule } from '@angular/material/table';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-   
+    MatTabsModule,
     RouterModule,
     MatBottomSheetModule,
     ReactiveFormsModule,

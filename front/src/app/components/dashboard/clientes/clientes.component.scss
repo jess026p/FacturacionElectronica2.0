@@ -9,9 +9,14 @@ mat-form-field{
    
   }
   
+  .container {
+    transform: scale(0.9);
+    border: 2px solid black;
+    overflow: auto;
+  }
   
   .table-container {
-    overflow-x: auto;
+    margin: 20px;
   }
   
   table {
@@ -19,17 +24,15 @@ mat-form-field{
     border-collapse: collapse;
   }
   
-  th, td {
+  table th,
+  table td {
     padding: 5px;
     text-align: left;
     border: 1px solid #ccc;
     margin: 40px;
-  }
   
-  th {
-    background-color: #f2f2f2;
-  }
   
+  }
   
   .custom-button {
     background-color: #300aae; /* Color de fondo deseado */
@@ -37,10 +40,4 @@ mat-form-field{
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-  }
-
-  cuerpo{
-    background-color: #3e0606; /* Cambia #ff0000 al color de fondo deseado */
-    width: 200px; /* Ajusta el ancho según tus necesidades */
-    height: 200px; 
   }

@@ -1,13 +1,13 @@
-<body class="cuerpo">
+
 <div class="container">
     <div >
 <h2>Cliente</h2>
-      <h2>CI:
+      <h3>CI:
         <mat-form-field>
             <mat-label>Buscar Cliente</mat-label>
             <input matInput placeholder="Cliente">
           </mat-form-field>
-      </h2>
+      </h3>
       
       <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Cliente</button>
       <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
@@ -50,7 +50,7 @@
       
       <h3>listado de Clientes</h3>
     </div>
-    <div>
+    <div class="table-container">
       <table mat-table [dataSource]="data"  class="mat-elevation-z8">
         <!-- Columna de identificación -->
         <ng-container matColumnDef="identificacion">
@@ -120,7 +120,7 @@
     
       
  </div>
-</body>
+
 
 
   
