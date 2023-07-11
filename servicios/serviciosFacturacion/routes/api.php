@@ -11,6 +11,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\VentasMaestroController;
 use App\Http\Controllers\VentamaestroCampoadicionalController;
 use App\Http\Controllers\VentamaestroFormapagoController;
+use App\Http\Controllers\VentasdetalleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -102,3 +103,20 @@ Route::get('/ventamaestro_formapago/{id}', [VentamaestroFormapagoController::cla
 Route::post('/ventamaestro_formapago', [VentamaestroFormapagoController::class, 'store']);
 Route::put('/ventamaestro_formapago/{id}', [VentamaestroFormapagoController::class, 'update']);
 Route::delete('/ventamaestro_formapago/{id}', [VentamaestroFormapagoController::class, 'destroy']);
+//
+//Rutas de Ventas Detalle
+//
+// Rutas para obtener todos los registros de la tabla
+Route::get('/ventasdetalle', [VentasdetalleController::class, 'index']);
+
+// Ruta para obtener un registro específico por su ID
+Route::get('/ventasdetalle/{id}', [VentasdetalleController::class, 'show']);
+
+// Ruta para crear un nuevo registro
+Route::post('/ventasdetalle', [VentasdetalleController::class, 'store']);
+
+// Ruta para actualizar un registro existente por su ID
+Route::put('/ventasdetalle/{id}', [VentasdetalleController::class, 'update']);
+
+// Ruta para eliminar un registro por su ID
+Route::delete('/ventasdetalle/{id}', [VentasdetalleController::class, 'destroy']);
