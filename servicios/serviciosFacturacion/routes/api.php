@@ -8,6 +8,7 @@ use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\FormaPagoController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\VentasMaestroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,3 +76,11 @@ Route::post('/productos', [ProductoController::class, 'store']);
 Route::get('/productos/{id}', [ProductoController::class, 'show']);
 Route::put('/productos/{id}', [ProductoController::class, 'update']);
 Route::delete('/productos/{id}', [ProductoController::class, 'destroy']);
+//
+//Rutas de Ventas Maestro
+//
+Route::get('/ventasmaestro', [VentasMaestroController::class, 'index']);
+Route::post('/ventasmaestro', [VentasMaestroController::class, 'store']);
+Route::get('/ventasmaestro/{id}', [VentasMaestroController::class, 'show']);
+Route::put('/ventasmaestro/{id}', [VentasMaestroController::class, 'update']);
+Route::delete('/ventasmaestro/{id}', [VentasMaestroController::class, 'destroy']);
