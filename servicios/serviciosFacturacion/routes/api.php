@@ -10,6 +10,7 @@ use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\VentasMaestroController;
 use App\Http\Controllers\VentamaestroCampoadicionalController;
+use App\Http\Controllers\VentamaestroFormapagoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,3 +94,11 @@ Route::post('ventamaestro_campoadicional', [VentamaestroCampoadicionalController
 Route::get('ventamaestro_campoadicional/{id}', [VentamaestroCampoadicionalController::class, 'show']);
 Route::put('ventamaestro_campoadicional/{id}', [VentamaestroCampoadicionalController::class, 'update']);
 Route::delete('ventamaestro_campoadicional/{id}', [VentamaestroCampoadicionalController::class, 'destroy']);
+//
+//Rutas de Ventas Maestro forma pago
+//
+Route::get('/ventamaestro_formapago', [VentamaestroFormapagoController::class, 'index']);
+Route::get('/ventamaestro_formapago/{id}', [VentamaestroFormapagoController::class, 'show']);
+Route::post('/ventamaestro_formapago', [VentamaestroFormapagoController::class, 'store']);
+Route::put('/ventamaestro_formapago/{id}', [VentamaestroFormapagoController::class, 'update']);
+Route::delete('/ventamaestro_formapago/{id}', [VentamaestroFormapagoController::class, 'destroy']);
