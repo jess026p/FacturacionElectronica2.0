@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinciaController;
 use App\Http\Controllers\CiudadController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\FormaPagoController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -45,3 +46,12 @@ Route::post('/empresas', [EmpresaController::class, 'store']);
 Route::get('/empresas/{id}', [EmpresaController::class, 'show']);
 Route::put('/empresas/{id}', [EmpresaController::class, 'update']);
 Route::delete('/empresas/{id}', [EmpresaController::class, 'destroy']);
+
+//
+//Rutas de formaspago
+//
+Route::get('/formaspago', [FormaPagoController::class, 'index']);
+Route::post('/formaspago', [FormaPagoController::class, 'store']);
+Route::get('/formaspago/{id}', [FormaPagoController::class, 'show']);
+Route::put('/formaspago/{id}', [FormaPagoController::class, 'update']);
+Route::delete('/formaspago/{id}', [FormaPagoController::class, 'destroy']);
