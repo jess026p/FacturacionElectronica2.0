@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinciaController;
 use App\Http\Controllers\CiudadController;
+use App\Http\Controllers\EmpresaController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,3 +37,11 @@ Route::post('/ciudades', [CiudadController::class, 'store']);
 Route::get('/ciudades/{id}', [CiudadController::class, 'show']);
 Route::put('/ciudades/{id}', [CiudadController::class, 'update']);
 Route::delete('/ciudades/{id}', [CiudadController::class, 'destroy']);
+//
+//Rutas de empresas
+//
+Route::get('/empresas', [EmpresaController::class, 'index']);
+Route::post('/empresas', [EmpresaController::class, 'store']);
+Route::get('/empresas/{id}', [EmpresaController::class, 'show']);
+Route::put('/empresas/{id}', [EmpresaController::class, 'update']);
+Route::delete('/empresas/{id}', [EmpresaController::class, 'destroy']);
