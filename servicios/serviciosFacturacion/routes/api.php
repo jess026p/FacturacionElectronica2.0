@@ -6,6 +6,8 @@ use App\Http\Controllers\ProvinciaController;
 use App\Http\Controllers\CiudadController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\FormaPagoController;
+use App\Http\Controllers\PersonaController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,6 +32,7 @@ Route::post('/provincias', [ProvinciaController::class, 'store']);
 Route::get('/provincias/{id}', [ProvinciaController::class, 'show']);
 Route::put('/provincias/{id}', [ProvinciaController::class, 'update']);
 Route::delete('/provincias/{id}', [ProvinciaController::class, 'destroy']);
+
 //
 //Rutas de ciudades
 //
@@ -55,3 +58,11 @@ Route::post('/formaspago', [FormaPagoController::class, 'store']);
 Route::get('/formaspago/{id}', [FormaPagoController::class, 'show']);
 Route::put('/formaspago/{id}', [FormaPagoController::class, 'update']);
 Route::delete('/formaspago/{id}', [FormaPagoController::class, 'destroy']);
+//
+//Rutas de Personas
+//
+Route::get('/personas', [PersonaController::class, 'index']);
+Route::post('/personas', [PersonaController::class, 'store']);
+Route::get('/personas/{id}', [PersonaController::class, 'show']);
+Route::put('/personas/{id}', [PersonaController::class, 'update']);
+Route::delete('/personas/{id}', [PersonaController::class, 'destroy']);
