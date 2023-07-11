@@ -7,6 +7,7 @@ use App\Http\Controllers\CiudadController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\FormaPagoController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,11 @@ Route::post('/personas', [PersonaController::class, 'store']);
 Route::get('/personas/{id}', [PersonaController::class, 'show']);
 Route::put('/personas/{id}', [PersonaController::class, 'update']);
 Route::delete('/personas/{id}', [PersonaController::class, 'destroy']);
+//
+//Rutas de Productos
+//
+Route::get('/productos', [ProductoController::class, 'index']);
+Route::post('/productos', [ProductoController::class, 'store']);
+Route::get('/productos/{id}', [ProductoController::class, 'show']);
+Route::put('/productos/{id}', [ProductoController::class, 'update']);
+Route::delete('/productos/{id}', [ProductoController::class, 'destroy']);
