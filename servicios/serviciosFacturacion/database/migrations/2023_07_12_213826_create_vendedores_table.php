@@ -14,8 +14,12 @@ class CreateVendedoresTable extends Migration
     public function up()
     {
         Schema::create('vendedores', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('Id');
+            $table->string('Nombre', 255);
+            $table->string('Apellido', 255);
+            $table->string('Usuario', 255);
+            $table->string('Contraseña', 255);
+            $table->string('CorreoElectronico', 255)->nullable();
         });
     }
 

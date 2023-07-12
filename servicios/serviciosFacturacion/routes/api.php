@@ -13,7 +13,7 @@ use App\Http\Controllers\VentamaestroCampoadicionalController;
 use App\Http\Controllers\VentamaestroFormapagoController;
 use App\Http\Controllers\VentasdetalleController;
 use App\Http\Controllers\EstablecimientoController;
-
+use App\Http\Controllers\VendedorController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -131,3 +131,13 @@ Route::post('establecimientos', [EstablecimientoController::class, 'store']);
 Route::get('establecimientos/{id}', [EstablecimientoController::class, 'show']);
 Route::put('establecimientos/{id}', [EstablecimientoController::class, 'update']);
 Route::delete('establecimientos/{id}', [EstablecimientoController::class, 'destroy']);
+
+//
+//Rutas de Vendedores
+//
+
+Route::get('vendedores', [VendedorController::class, 'index']);
+Route::post('vendedores', [VendedorController::class, 'store']);
+Route::get('vendedores/{id}', [VendedorController::class, 'show']);
+Route::put('vendedores/{id}', [VendedorController::class, 'update']);
+Route::delete('vendedores/{id}', [VendedorController::class, 'destroy']);
