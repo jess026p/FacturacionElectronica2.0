@@ -12,6 +12,7 @@ use App\Http\Controllers\VentasMaestroController;
 use App\Http\Controllers\VentamaestroCampoadicionalController;
 use App\Http\Controllers\VentamaestroFormapagoController;
 use App\Http\Controllers\VentasdetalleController;
+use App\Http\Controllers\EstablecimientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -120,3 +121,13 @@ Route::put('/ventasdetalle/{id}', [VentasdetalleController::class, 'update']);
 
 // Ruta para eliminar un registro por su ID
 Route::delete('/ventasdetalle/{id}', [VentasdetalleController::class, 'destroy']);
+
+//
+//Rutas de Establecimiento
+//
+
+Route::get('establecimientos', [EstablecimientoController::class, 'index']);
+Route::post('establecimientos', [EstablecimientoController::class, 'store']);
+Route::get('establecimientos/{id}', [EstablecimientoController::class, 'show']);
+Route::put('establecimientos/{id}', [EstablecimientoController::class, 'update']);
+Route::delete('establecimientos/{id}', [EstablecimientoController::class, 'destroy']);
