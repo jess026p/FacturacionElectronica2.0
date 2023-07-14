@@ -5,15 +5,19 @@
       </h3></mat-card-content>
   </mat-card>
   <div class="container">
-      <div >
-      
-        <h3>CI:
-          <mat-form-field>
-              <mat-label>Buscar </mat-label>
-              <input matInput placeholder="Producto">
-            </mat-form-field>
-        </h3>
-        
+      <div > 
+        <form class="example-form" (keydown.enter)="$event.preventDefault()">
+          <mat-form-field class="example-full-width">
+            <mat-label>Productos</mat-label>
+            <input matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-icon matPrefix>search</mat-icon>
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOption(option)">
+                {{ option.codigo }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
         <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Producto</button>
         <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
           <mat-form-field>

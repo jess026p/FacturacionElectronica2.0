@@ -16,6 +16,8 @@ import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angula
 
 import { FirmaElectronicaComponent } from './firma-electronica/firma-electronica.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
+import { MatOptionModule } from '@angular/material/core';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -31,14 +33,17 @@ import { SucursalesComponent } from './sucursales/sucursales.component';
     AdministracionComponent,
    
     FirmaElectronicaComponent,
-    SucursalesComponent
+    SucursalesComponent,
+    
    
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-    MatDialogModule
+    MatDialogModule,
+    MatOptionModule,
+    MatAutocompleteModule,
     
    
   ]

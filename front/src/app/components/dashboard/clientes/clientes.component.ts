@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export interface Persona {
   identificacion: string;
+  tipoIdentificacion: string;
   nombre: string;
   apellido: string;
   direccion: string;
@@ -18,7 +19,7 @@ export interface Persona {
 })
 export class ClientesComponent implements OnInit {
   data: Persona[] = [
-    { identificacion: '123456789', nombre: 'John', apellido: 'Doe', direccion: 'Calle Principal 123', telefono: '555-1234', celular: '555-5678', correoElectronico: 'johndoe@example.com' },
+    { identificacion: '123456789',tipoIdentificacion:'ruc', nombre: 'John', apellido: 'Doe', direccion: 'Calle Principal 123', telefono: '555-1234', celular: '555-5678', correoElectronico: 'johndoe@example.com' },
     // Añade más objetos de ejemplo para completar la tabla
   ];
 
@@ -57,7 +58,8 @@ export class ClientesComponent implements OnInit {
     if (this.formulario.valid) {
       // Realiza las acciones necesarias al guardar el formulario
       const nuevaPersona: Persona = {
-        identificacion: '', // Asigna el valor correspondiente del formulario
+        identificacion: this.formulario.value.identificacion,
+        tipoIdentificacion: this.formulario.value.tipoIdentificacion,
         nombre: this.formulario.value.nombre,
         apellido: this.formulario.value.apellido,
         direccion: this.formulario.value.direccion,

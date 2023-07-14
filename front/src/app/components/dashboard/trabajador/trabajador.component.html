@@ -6,13 +6,18 @@
 </mat-card>
 <div class="container">
     <div >
-    
-      <h3>CI:
-        <mat-form-field>
-            <mat-label>Buscar </mat-label>
-            <input matInput placeholder="Cliente">
-          </mat-form-field>
-      </h3>
+      <form class="example-form" (keydown.enter)="$event.preventDefault()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Vendedor</mat-label>
+          <input matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-icon matPrefix>search</mat-icon>
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOption(option)">
+              {{ option.identificacion }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
       
       <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Vendedor</button>
       <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">

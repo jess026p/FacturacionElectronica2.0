@@ -19,6 +19,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select'; 
+
+
 @NgModule({
   declarations: [],
   imports: [
@@ -53,7 +56,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   exports:[
    
@@ -88,7 +92,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

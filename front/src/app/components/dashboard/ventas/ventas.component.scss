@@ -1,6 +1,12 @@
 /*.clase.principal {
   transform: scale(0.9); /* Ajusta el valor de escala según tus necesidades }*/
 
+  
+  mat-form-field{
+ 
+    display: flex;
+    justify-content: space-between;
+  }
 .contenedor {
   transform: scale(0.9);
   display: flex;

@@ -4,10 +4,10 @@
     <form class="sales-form">
       <h3>Ventas</h3>
         
-        <mat-form-field >
+       <!-- <mat-form-field >
             <mat-label>Buscar Venta</mat-label>
             <input matInput placeholder="venta">
-          </mat-form-field>
+          </mat-form-field> -->
       
       <div class="form-group">
           <label>Establecimiento</label>
@@ -19,7 +19,7 @@
           </select>
       </div>
       <div class="form-group">
-        <label>Nombre Comercial</label>
+        <label>Numero de factura</label>
         <input type="text" name="nombreComercial">
       </div>
       <div class="form-group">
@@ -30,10 +30,19 @@
         <label>Trabajador</label>
         <input type="text" name="trabajador">
       </div>
-      <div class="form-group">
-        <label>Cliente</label>
-        <input type="text" name="cliente">
-      </div>
+      <form class="example-form" (keydown.enter)="$event.preventDefault()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Cliente</mat-label>
+          <input matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-icon matPrefix>search</mat-icon>
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOption(option)">
+              {{ option.identificacion }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      
       <div class="form-group">
         <button type="button" mat-raised-button color="primary" (click)="toggleForm()">Nuevo Cliente</button>
         <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
@@ -41,6 +50,15 @@
             <mat-label>identificacion</mat-label>
             <input matInput formControlName="identificacion" required>
           </mat-form-field>
+          <mat-form-field>
+            <mat-label>Tipo de Identificación</mat-label>
+            <mat-select formControlName="tipoIdentificacion">
+              <mat-option value="cedula">Cédula</mat-option>
+              <mat-option value="pasaporte">Pasaporte</mat-option>
+              <mat-option value="ruc">RUC</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
           <mat-form-field>
             <mat-label>Nombre</mat-label>
             <input matInput formControlName="nombre" required>
@@ -75,10 +93,19 @@
         </form>
           
       </div>
-      <div class="form-group">
-        <label>Buscar Producto</label>
-        <input type="text" name="buscarProducto">
-      </div>
+      <form class="example-form" (keydown.enter)="$event.preventDefault()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Producto</mat-label>
+          <input matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-icon matPrefix>search</mat-icon>
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOption(option)">
+              {{ option.identificacion }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      
       <div class="form-group">
         <label>Cantidad</label>
         <input type="number" name="cantidad">
