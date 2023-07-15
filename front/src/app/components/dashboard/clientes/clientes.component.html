@@ -9,45 +9,56 @@
           </mat-form-field>
       </h3>
       
-      <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Cliente</button>
-      <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
-        <mat-form-field>
-          <mat-label>identificacion</mat-label>
-          <input matInput formControlName="identificacion" required>
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Nombre</mat-label>
-          <input matInput formControlName="nombre" required>
-        </mat-form-field>
-      
-        <mat-form-field>
-          <mat-label>Apellido</mat-label>
-          <input matInput formControlName="apellido" required>
-        </mat-form-field>
-      
-        <mat-form-field>
-          <mat-label>Dirección</mat-label>
-          <input matInput formControlName="direccion" required>
-        </mat-form-field>
-      
-        <mat-form-field>
-          <mat-label>Teléfono</mat-label>
-          <input matInput formControlName="telefono" required>
-        </mat-form-field>
-      
-        <mat-form-field>
-          <mat-label>Celular</mat-label>
-          <input matInput formControlName="celular" required>
-        </mat-form-field>
-      
-        <mat-form-field>
-          <mat-label>Correo Electrónico</mat-label>
-          <input matInput formControlName="correoElectronico" required>
-        </mat-form-field>
-      
-        <button mat-raised-button color="primary" type="submit">Guardar</button>
-      </form>
-      
+      <div class="form-group">
+        <button type="button" mat-raised-button color="primary" (click)="toggleForm()">Nuevo Cliente</button>
+        <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
+          <mat-form-field>
+            <mat-label>identificacion</mat-label>
+            <input matInput formControlName="identificacion" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Tipo de Identificación</mat-label>
+            <mat-select formControlName="tipoIdentificacion">
+              <mat-option value="cedula">Cédula</mat-option>
+              <mat-option value="pasaporte">Pasaporte</mat-option>
+              <mat-option value="ruc">RUC</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="apellido" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Dirección</mat-label>
+            <input matInput formControlName="direccion" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Teléfono</mat-label>
+            <input matInput formControlName="telefono" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Celular</mat-label>
+            <input matInput formControlName="celular" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Correo Electrónico</mat-label>
+            <input matInput formControlName="correoElectronico" required>
+          </mat-form-field>
+        
+          <button mat-raised-button color="primary" type="submit">Guardar</button>
+        </form>
+          
+      </div>
       <h3>listado de Clientes</h3>
     </div>
     <div class="table-container">
