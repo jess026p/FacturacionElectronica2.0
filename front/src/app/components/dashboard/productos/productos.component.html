@@ -1,0 +1,145 @@
+<mat-card>
+    <mat-card-content>
+      <h3>
+        Productos
+      </h3></mat-card-content>
+  </mat-card>
+  <div class="container">
+      <div > 
+        <form class="example-form" (keydown.enter)="$event.preventDefault()">
+          <mat-form-field class="example-full-width">
+            <mat-label>Productos</mat-label>
+            <input matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-icon matPrefix>search</mat-icon>
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOption(option)">
+                {{ option.codigo }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Producto</button>
+        <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
+          <mat-form-field>
+            <mat-label>codigo</mat-label>
+            <input matInput formControlName="codigo" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>precioU</mat-label>
+            <input matInput formControlName="precioU" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>descripcion</mat-label>
+            <input matInput formControlName="descripcion" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>descuento</mat-label>
+            <input matInput formControlName="descuento" required>
+          </mat-form-field>
+      
+          <mat-form-field>
+            <mat-label>tarifaIVa</mat-label>
+            <input matInput formControlName="tarifaIVa" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>stock</mat-label>
+            <input matInput formControlName="stock" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>categoria</mat-label>
+            <input matInput formControlName="categoria" required>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Guardar</button>
+        </form>
+       
+       
+        <h3>lista de Productos</h3>
+      </div>
+      
+      <div class="table-container">
+        <table mat-table [dataSource]="data"  class="mat-elevation-z8">
+          <!-- Columna de identificación -->
+          <ng-container matColumnDef="codigo">
+            <th mat-header-cell *matHeaderCellDef> Codigo </th>
+            <td mat-cell *matCellDef="let element"> {{element.codigo} </td>
+          </ng-container>
+        
+          <!-- Columna de nombre -->
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+          </ng-container>
+        
+          <!-- Columna de apellido -->
+          <ng-container matColumnDef="precioU">
+            <th mat-header-cell *matHeaderCellDef> PrecioUnitario </th>
+            <td mat-cell *matCellDef="let element"> {{element.precioU}} </td>
+          </ng-container>
+        
+          <!-- Columna de dirección -->
+          <ng-container matColumnDef="descripcion">
+            <th mat-header-cell *matHeaderCellDef> descripcion </th>
+            <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+          </ng-container>
+        
+          <!-- Columna de teléfono -->
+          <ng-container matColumnDef="descuento">
+            <th mat-header-cell *matHeaderCellDef> descuento </th>
+            <td mat-cell *matCellDef="let element"> {{element.descuento}} </td>
+          </ng-container>
+          <!-- Columna de teléfono -->
+          <ng-container matColumnDef="tarifaIVa">
+            <th mat-header-cell *matHeaderCellDef> tarifaIVa </th>
+            <td mat-cell *matCellDef="let element"> {{element.tarifaIVa}} </td>
+          </ng-container>
+        
+          <!-- Columna de celular -->
+          <ng-container matColumnDef="stock">
+            <th mat-header-cell *matHeaderCellDef> stock </th>
+            <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+          </ng-container>
+        
+          <!-- Columna de correo electrónico -->
+          <ng-container matColumnDef="categoria">
+            <th mat-header-cell *matHeaderCellDef> categoria </th>
+            <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>
+          </ng-container>
+        
+          <!-- Columna de acciones -->
+          <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button color="primary" (click)="editarElemento(element)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="eliminarElemento(element)">
+                <mat-icon>delete</mat-icon>
+              </button>
+
+              <button mat-icon-button color="accent">
+                <mat-icon>shopping_cart</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+        
+          <!-- Encabezados de columna -->
+          <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+        
+          <!-- Filas de datos -->
+          <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+        </table>
+        
+        
+  
+      </div>
+  
+  
+    </div>
+    

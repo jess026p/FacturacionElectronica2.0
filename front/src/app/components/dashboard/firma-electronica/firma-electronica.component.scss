@@ -1,0 +1,68 @@
+mat-card {
+  background-color: rgb(178, 189, 235);
+}
+
+
+.row select {
+ 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 90px;
+
+}
+  
+.nocolor {
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  
+
+ 
+}
+
+input[type="text"]
+ {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 90px;
+  
+}
+.btn{
+  width: 105%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 90px;
+  
+}
+.btng{
+  width: 50%;
+  
+  
+}
+
+.impuestos-container {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: aliceblue;
+}
+
+.label-column {
+  width: 60%;
+  min-width: 100px;
+  margin: 12px;
+  margin-left: 90px;
+}
+
+.input-column {
+  flex-grow: 1;
+  width: 60%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
