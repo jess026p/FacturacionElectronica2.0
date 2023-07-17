@@ -10,7 +10,7 @@ class VentasMaestro extends Model
      use HasFactory;
 
     protected $table = 'ventasmaestro';
-
+   public $timestamps = false;
     protected $primaryKey = 'Id';
 
     protected $fillable = [
@@ -55,7 +55,7 @@ class VentasMaestro extends Model
         'IdPersona',
         'IdVendedor',
         'IdGrupoPersona',
-        'IdCotizacion',
+        'IdEstablecimiento',
         'FechaSistema',
         'XmlProcesado',
     ];

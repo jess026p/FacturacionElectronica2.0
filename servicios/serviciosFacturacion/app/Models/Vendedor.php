@@ -9,6 +9,7 @@ class Vendedor extends Model
 {
     use HasFactory;
     protected $table = 'vendedores';
+     public $timestamps = false;
     protected $fillable = [
         'Nombre',
         'Apellido',
