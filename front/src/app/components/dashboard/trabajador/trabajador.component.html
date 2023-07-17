@@ -1,0 +1,86 @@
+<mat-card>
+  <mat-card-content>
+    <h3>Vendedores</h3>
+  </mat-card-content>
+</mat-card>
+
+<div class="container">
+  <div>
+    <form class="example-form" (keydown.enter)="$event.preventDefault()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Vendedor</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput [formControl]="myControl" [matAutocomplete]="auto" (ngModelChange)="buscarVendedor()">
+
+
+      </mat-form-field>
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOption(option)">
+
+        </mat-option>
+      </mat-autocomplete>
+    </form>
+
+
+    <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Vendedor</button>
+
+    <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="apellido" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Usuario</mat-label>
+        <input matInput formControlName="usuario" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="contrasena" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput formControlName="correoElectronico" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+    </form>
+
+
+    <h3>Lista de Trabajadores</h3>
+  </div>
+
+  <div class="mat-elevation-z8">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Usuario</th>
+          <th>Contraseña</th>
+          <th>Correo Electrónico</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let trabajador of data">
+          <td>{{ trabajador.nombre }}</td>
+          <td>{{ trabajador.apellido }}</td>
+          <td>{{ trabajador.usuario }}</td>
+          <td>{{ trabajador.contrasena }}</td>
+          <td>{{ trabajador.correoElectronico }}</td>
+          <td>
+            <button mat-icon-button color="primary" (click)="editarElemento(trabajador)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button class="mat-warn" (click)="eliminarElemento(trabajador)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

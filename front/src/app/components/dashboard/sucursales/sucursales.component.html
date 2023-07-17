@@ -1,0 +1,81 @@
+<mat-card>
+  <mat-card-content>
+    <h3>Sucursales</h3>
+  </mat-card-content>
+</mat-card>
+
+<div class="container">
+  <div>
+    <form class="example-form" (keydown.enter)="$event.preventDefault()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Sucursales</mat-label>
+        <input matInput [formControl]="myControl" [matAutocomplete]="auto" (input)="searchSucursales($event)">
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="selectOption(option)">
+            {{ option.identificacion }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" (click)="toggleForm()">Nueva Sucursal</button>
+    <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
+      <mat-form-field>
+        <mat-label>Identificación</mat-label>
+        <input matInput formControlName="identificacion" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <input matInput formControlName="descripcion" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Dirección</mat-label>
+        <input matInput formControlName="direccion" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Teléfono</mat-label>
+        <input matInput formControlName="telefono" required>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+    </form>
+
+    <h3>Lista de Sucursales</h3>
+  </div>
+  <div class="mat-elevation-z8">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sucursal of filteredSucursales">
+          <td>{{ sucursal.nombre }}</td>
+          <td>{{ sucursal.descripcion }}</td>
+          <td>{{ sucursal.telefono }}</td>
+          <td>{{ sucursal.direccion }}</td>
+          <td>
+            <button mat-icon-button color="primary" (click)="editarElemento(sucursal)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button class="mat-warn" (click)="eliminarElemento(sucursal)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

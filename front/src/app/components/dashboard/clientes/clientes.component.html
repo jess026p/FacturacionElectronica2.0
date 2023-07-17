@@ -1,0 +1,125 @@
+
+<div class="container">
+    <div >
+<h2>Cliente</h2>
+      <h3>
+        <mat-form-field>
+          <mat-label>Buscar Cliente</mat-label>
+          <input matInput [formControl]="filtroCliente" placeholder="Cliente">
+        </mat-form-field>
+      </h3>
+
+      <button mat-raised-button color="primary" (click)="toggleForm()">Nuevo Cliente</button>
+      <form [formGroup]="formulario" *ngIf="mostrarFormulario" (ngSubmit)="submitForm()">
+        <mat-form-field>
+          <mat-label>identificacion</mat-label>
+          <input matInput formControlName="identificacion" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="nombre" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Apellido</mat-label>
+          <input matInput formControlName="apellido" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Dirección</mat-label>
+          <input matInput formControlName="direccion" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Teléfono</mat-label>
+          <input matInput formControlName="telefono" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Celular</mat-label>
+          <input matInput formControlName="celular" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Correo Electrónico</mat-label>
+          <input matInput formControlName="correoElectronico" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Guardar</button>
+      </form>
+
+      <h3>listado de Clientes</h3>
+    </div>
+    <div class="table-container">
+      <table mat-table [dataSource]="data"  class="mat-elevation-z8">
+        <!-- Columna de identificación -->
+        <ng-container matColumnDef="identificacion">
+          <th mat-header-cell *matHeaderCellDef> Identificación </th>
+          <td mat-cell *matCellDef="let element"> {{element.identificacion}} </td>
+        </ng-container>
+
+        <!-- Columna de nombre -->
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
+
+        <!-- Columna de apellido -->
+        <ng-container matColumnDef="apellido">
+          <th mat-header-cell *matHeaderCellDef> Apellido </th>
+          <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+        </ng-container>
+
+        <!-- Columna de dirección -->
+        <ng-container matColumnDef="direccion">
+          <th mat-header-cell *matHeaderCellDef> Dirección </th>
+          <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+        </ng-container>
+
+        <!-- Columna de teléfono -->
+        <ng-container matColumnDef="telefono">
+          <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+          <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+        </ng-container>
+
+        <!-- Columna de celular -->
+        <ng-container matColumnDef="celular">
+          <th mat-header-cell *matHeaderCellDef> Celular </th>
+          <td mat-cell *matCellDef="let element"> {{element.celular}} </td>
+        </ng-container>
+
+        <!-- Columna de correo electrónico -->
+        <ng-container matColumnDef="correoElectronico">
+          <th mat-header-cell *matHeaderCellDef> Correo Electrónico </th>
+          <td mat-cell *matCellDef="let element"> {{element.correoElectronico}} </td>
+        </ng-container>
+
+        <!-- Columna de acciones -->
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" (click)="editarElemento(element)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="eliminarElemento(element)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <!-- Encabezados de columna -->
+        <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+
+        <!-- Filas de datos -->
+        <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+      </table>
+
+
+
+    </div>
+
+
+ </div>
+
+
+
