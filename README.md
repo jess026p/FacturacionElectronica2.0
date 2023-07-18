@@ -1,2 +1,2 @@
-﻿# FacturacionElectronica2.0
-Intentando crear lo increable :v
+﻿# FacturacionElectronica - SistFact
+Aplicacion que permite la generacion de facturas electronicas, gestion de clientes, productos y trabajadores.
