@@ -1,0 +1,103 @@
+<mat-card>
+  <mat-card-content> <h3>Vendedores</h3></mat-card-content>
+</mat-card>
+<div class="container">
+  <div>
+    <form class="example-form" (keydown.enter)="$event.preventDefault()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Vendedor</mat-label>
+        <input matInput [formControl]="myControl" [matAutocomplete]="auto" />
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
+            (click)="selectOption(option)"
+          >
+            {{ option.identificacion }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+    <button mat-raised-button color="primary" (click)="toggleForm()">
+      Nuevo Vendedor
+    </button>
+    <form
+      [formGroup]="formulario"
+      *ngIf="mostrarFormulario"
+      (ngSubmit)="submitForm()"
+    >
+      <mat-form-field>
+        <mat-label>Identificacion</mat-label>
+        <input matInput formControlName="identificacion" required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="apellido" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Dirección</mat-label>
+        <input matInput formControlName="direccion" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Usuario</mat-label>
+        <input matInput formControlName="usuario" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="contrasena" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput formControlName="correoElectronico" required />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+    </form>
+
+    <h3>lista de Trabajadores</h3>
+  </div>
+  <div class="mat-elevation-z8">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Dirección</th>
+          <th>usuario</th>
+          <th>contrasena</th>
+          <th>Correo Electrónico</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>nombre</td>
+          <td>apelido</td>
+          <td>direccion</td>
+          <td>usuario</td>
+          <td>contrasena</td>
+          <td>correo electronico</td>
+          <td>
+            <button mat-icon-button color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button class="mat-warn">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
