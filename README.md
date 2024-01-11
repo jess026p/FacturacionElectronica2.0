@@ -74,20 +74,6 @@ Asegúrate de tener instalados los siguientes componentes:
   
 ### ⚙️ Instalación
 
-# Clonar el Repositorio y Hacerlo Funcionar
-
-## 1. Clonar el Repositorio:
-
-```bash
-git clone git@github.com:jess026p/FacturacionElectronica2.0.git
-```
-## 2. Instalar Dependencias de Laravel:
-cd FacturacionElectronica2.0/laravel
-composer install
-
-bash
-Copy code
-# Clonar el Repositorio y Hacerlo Funcionar
 
 ## 1. Clonar el Repositorio:
 
@@ -133,3 +119,53 @@ Accede a la aplicación a través de localhost en tu navegador web.
 #### Login
 Te permitirá ingresar como administrador y como cliente de acuerdo a las credenciales que te proporcione el administrador ya que es el uniuco que podra crear nuevos usuarios como vendedore.
 ![Localhost](https://github.com/jess026p/FacturacionElectronica2.0/blob/EsthefaniaVillacres-patch-2/imgFLogin.png)
+#### Gestión de ventas
+En esta ventana se realizará la creación de una nueva factura que se emitirá como usuario vendedor las funciones principales serán crear clientes si no estan registrados en el sistema o buscar para que se complete los datos, asignar el nombre del trabajador que lo atendió, buscar productos y guardarlos y generar el valor total a a pagar.
+![Localhost](https://github.com/jess026p/FacturacionElectronica2.0/blob/EsthefaniaVillacres-patch-2/imgFVentas.jpg)
+
+#### Firma Electrónica
+La firma electronica será ingresada al sistema en la siguiente ventana siempre y cuando tenga todas las validaciones legales.
+![Localhost](https://github.com/jess026p/FacturacionElectronica2.0/blob/EsthefaniaVillacres-patch-2/imgFFirmaElectronica.jpg)
+
+#### Gestión Vendedores
+  Los vendedores serán ingresados únicamente por el admistrador del sistema en la siguiente ventana. 
+![Localhost](https://github.com/jess026p/FacturacionElectronica2.0/blob/EsthefaniaVillacres-patch-2/imgFVendedorA.jpg)
+
+#### Gestión surcusales
+Las sucursales serán creadas al igual que los vendedores solo por el administrador.
+![Localhost](https://github.com/jess026p/FacturacionElectronica2.0/blob/EsthefaniaVillacres-patch-2/imgFSucursalesA.jpg)
+#### Gestión de productos
+Los productos serán creados por el administrados en la siguiente ventana así como se podrán visualizar en la tabla los productos ya registrados.
+![Localhost](https://github.com/jess026p/FacturacionElectronica2.0/blob/EsthefaniaVillacres-patch-2/imgFProductosA.jpg)
+#### Gestión facturas
+La administración se encargará de la revision de las facturas emitidas, asi como las exportaciones a xml y el envio al correo de los usuarios.
+![Localhost](https://github.com/jess026p/FacturacionElectronica2.0/blob/EsthefaniaVillacres-patch-2/imgFFacturasA.jpg)
+
+## 🤝 Contribución
+Si deseas contribuir a este proyecto, sigue los siguientes pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama:
+```bash
+git checkout -b nombre-de-la-rama
+```
+3. Realiza los cambios y haz commit:
+```bash
+git commit -m "Descripción de los cambios"
+```
+4. Envía los cambios a tu fork:
+```bash
+git push origin nombre-de-la-rama
+```
+5. Crea una pull request en este repositorio.
+
+## ©️ Licencia
+Este proyecto académico no tiene una licencia específica asignada. Todos los derechos de autor pertenecen a los miembros del equipo de desarrollo. Ten en cuenta que esto significa que no se otorgan permisos explícitos para utilizar, modificar o distribuir el código fuente o los archivos relacionados. Cualquier uso, reproducción o distribución del proyecto debe obtener permiso previo.
+## 📧 Contacto
+Si tienes alguna pregunta o comentario, puedes contactarte con los miembros del equipo de desarrollo:
+
+* dpinchao9519@uta.edu.ec
+* jtituana9563@uta.edu.ec
+* svillacres6104@uta.edu.ec
+* anaranjo4578@uta.edu.ec
+
