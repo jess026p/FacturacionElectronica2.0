@@ -165,6 +165,6 @@ Este proyecto académico no tiene una licencia específica asignada. Todos los d
 Si tienes alguna pregunta o comentario, puedes contactarte con los miembros del equipo de desarrollo:
 
 * dpinchao9519@uta.edu.ec
-* jtituana9563@uta.edu.ec
+* jtituana8324@uta.edu.ec
 * svillacres6104@uta.edu.ec
 * anaranjo4578@uta.edu.ec
